@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>📚 Study Planner</h1>
+      <p>Plan smarter, track better, and achieve more</p>s
+    </header>
+
+    <!-- Quick Stats -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3 id="totalTasks">0</h3>
+        <p>Total Tasks</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="completedTasks">0</h3>
+        <p>Completed</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="pendingTasks">0</h3>
+        <p>Pending</p>
+      </div>
+    </section>
+
+    <!-- Task Form -->
+    <section class="task-section">
+      <h2>Add a New Task</h2>
+      <form id="addTaskForm">
+        <input type="text" id="taskTitle" placeholder="Enter task title..." required>
+        <input type="date" id="taskDate">
+        <textarea id="taskDescription" placeholder="Add description..."></textarea>
+        <button type="submit">➕ Add Task</button>
+      </form>
+    </section>
+
+    <!-- Filter Options -->
+    <section class="filter-section">
+      <h2>Filter Tasks</h2>
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('pending')">Pending</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+    </section>
+
+    <!-- Task List -->
+    <section class="task-list">
+      <h2>My Tasks</h2>
+      <ul id="tasks">
+        <!-- tasks will appear here -->
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ for Students | Capstone Project 2025</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
